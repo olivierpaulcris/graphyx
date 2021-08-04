@@ -1,0 +1,388 @@
+body {
+    background-color: #bbdefb;
+    font-family: 'Roboto', sans-serif;
+    color: #002241;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin: -3px 0px;
+    align-items: center;
+}
+
+h1 {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.title-graph {
+    text-align: center;
+    padding: 10px 0px 25px 0px;
+    font-size: 42px;
+}
+
+.title-container {
+    text-align: right;
+    width: 25%;
+}
+
+.title-container h1 {
+    padding-right: 20px;
+}
+
+.value-container {
+    margin-top: 5px;
+} 
+    
+.number-container {
+    text-align: left;
+    width: 25%;
+}
+
+.number-container h1 {
+    padding-left: 30px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    /* height: 70px; */
+    width: 100%;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 0;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+}
+
+.place-0::-webkit-slider-thumb {
+    width: 70px;
+    height: 70px;
+}
+
+.place-1::-webkit-slider-thumb {
+    width: 69px;
+    height: 69px;
+}
+
+.place-2::-webkit-slider-thumb {
+    width: 68px;
+    height: 68px;
+}
+
+.place-3::-webkit-slider-thumb {
+    width: 67px;
+    height: 67px;
+}
+
+.place-4::-webkit-slider-thumb {
+    width: 66px;
+    height: 66px;
+}
+
+.place-5::-webkit-slider-thumb {
+    width: 65px;
+    height: 65px;
+}
+
+.place-6::-webkit-slider-thumb {
+    width: 64px;
+    height: 64px;
+}
+
+.place-7::-webkit-slider-thumb {
+    width: 63px;
+    height: 63px;
+}
+
+.place-8::-webkit-slider-thumb {
+    width: 62px;
+    height: 62px;
+}
+
+.place-9::-webkit-slider-thumb {
+    width: 61px;
+    height: 61px;
+}
+
+.place-10::-webkit-slider-thumb {
+    width: 60px;
+    height: 60px;
+}
+
+.place-11::-webkit-slider-thumb {
+    width: 59px;
+    height: 59px;
+}
+
+.place-12::-webkit-slider-thumb {
+    width: 59px;
+    height: 59px;
+}
+
+.place-13::-webkit-slider-thumb {
+    width: 58px;
+    height: 58px;
+}
+
+.place-14::-webkit-slider-thumb {
+    width: 57px;
+    height: 57px;
+}
+
+.place-15::-webkit-slider-thumb {
+    width: 56px;
+    height: 56px;
+}
+
+.place-16::-webkit-slider-thumb {
+    width: 55px;
+    height: 55px;
+}
+
+.place-17::-webkit-slider-thumb {
+    width: 54px;
+    height: 54px;
+}
+
+.place-18::-webkit-slider-thumb {
+    width: 53px;
+    height: 53px;
+}
+
+.place-19::-webkit-slider-thumb {
+    width: 52px;
+    height: 52px;
+}
+
+.place-20::-webkit-slider-thumb {
+    width: 51px;
+    height: 51px;
+}
+
+.place-21::-webkit-slider-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+.place-22::-webkit-slider-thumb {
+    width: 49px;
+    height: 49px;
+}
+
+.place-23::-webkit-slider-thumb {
+    width: 48px;
+    height: 48px;
+}
+
+.place-24::-webkit-slider-thumb {
+    width: 47px;
+    height: 47px;
+}
+
+.place-25::-webkit-slider-thumb {
+    width: 46px;
+    height: 46px;
+}
+
+.place-26::-webkit-slider-thumb {
+    width: 45px;
+    height: 45px;
+}
+
+.place-27::-webkit-slider-thumb {
+    width: 44px;
+    height: 44px;
+}
+
+.place-28::-webkit-slider-thumb {
+    width: 43px;
+    height: 43px;
+}
+
+.place-29::-webkit-slider-thumb {
+    width: 42px;
+    height: 42px;
+}
+
+.place-30::-webkit-slider-thumb {
+    width: 41px;
+    height: 41px;
+}
+
+.place-31::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+}
+
+.aguascalientes::-webkit-slider-thumb {
+    background-image: url('images/aguascalientes-logo.png');
+    border: 3px solid #df4a2e;
+}
+
+.baja-california::-webkit-slider-thumb {
+    background-image: url('images/baja-california-logo.png');
+    border: 3px solid #44c5f0;
+}
+
+.baja-california-sur::-webkit-slider-thumb {
+    background-image: url('images/baja-california-sur-logo.png');
+    border: 3px solid #0071bd;
+}
+
+.campeche::-webkit-slider-thumb {
+    background-image: url('images/campeche-logo.png');
+    border: 3px solid #0e6da5;
+}
+
+.coahuila::-webkit-slider-thumb {
+    background-image: url('images/coahuila-logo.png');
+    border: 3px solid #4c7e27;
+}
+
+.colima::-webkit-slider-thumb {
+    background-image: url('images/colima-logo.png');
+    border: 3px solid #d2a898;
+}
+
+.chiapas::-webkit-slider-thumb {
+    background-image: url('images/chiapas-logo.png');
+    border: 3px solid #774421;
+}
+
+.chihuahua::-webkit-slider-thumb {
+    background-image: url('images/chihuahua-logo.png');
+    border: 3px solid #7cc4ea;
+}
+
+.cdmx::-webkit-slider-thumb {
+    background-image: url('images/cdmx-logo.png');
+    border: 3px solid #11ad4b;
+}
+
+.durango::-webkit-slider-thumb {
+    background-image: url('images/durango-logo.png');
+    border: 3px solid #b82f30;
+}
+
+.guanajuato::-webkit-slider-thumb {
+    background-image: url('images/guanajuato-logo.png');
+    border: 3px solid #1c6799;
+}
+
+.guerrero::-webkit-slider-thumb {
+    background-image: url('images/guerrero-logo.png');
+    border: 3px solid #7bc1e5;
+}
+
+.hidalgo::-webkit-slider-thumb {
+    background-image: url('images/hidalgo-logo.png');
+    border: 3px solid #c9a95f;
+}
+
+.jalisco::-webkit-slider-thumb {
+    background-image: url('images/jalisco-logo.png');
+    border: 3px solid #0d668c;
+}
+
+.edomx::-webkit-slider-thumb {
+    background-image: url('images/edomx-logo.png');
+    border: 3px solid #ce2c16;
+}
+
+.michoacan::-webkit-slider-thumb {
+    background-image: url('images/michoacan-logo.png');
+    border: 3px solid #04903f;
+}
+
+.morelos::-webkit-slider-thumb {
+    background-image: url('images/morelos-logo.png');
+    border: 3px solid #7c3e14;
+}
+
+.nayarit::-webkit-slider-thumb {
+    background-image: url('images/nayarit-logo.png');
+    border: 3px solid #069c41;
+}
+
+.nuevo-leon::-webkit-slider-thumb {
+    background-image: url('images/nuevo-leon-logo.png');
+    border: 3px solid #9da1a4;
+}
+
+.oaxaca::-webkit-slider-thumb {
+    background-image: url('images/oaxaca-logo.png');
+    border: 3px solid #ae2e22;
+}
+
+.puebla::-webkit-slider-thumb {
+    background-image: url('images/puebla-logo.png');
+    border: 3px solid #168dc6;
+}
+
+.queretaro::-webkit-slider-thumb {
+    background-image: url('images/queretaro-logo.png');
+    border: 3px solid #2c1e74;
+}
+
+.quintana-roo::-webkit-slider-thumb {
+    background-image: url('images/quintana-roo-logo.png');
+    border: 3px solid #d8521b;
+}
+
+.san-luis-potosi::-webkit-slider-thumb {
+    background-image: url('images/san-luis-potosi-logo.png');
+    border: 3px solid #d1b42c;
+}
+
+.sinaloa::-webkit-slider-thumb {
+    background-image: url('images/sinaloa-logo.png');
+    border: 3px solid #bc1832;
+}
+
+.sonora::-webkit-slider-thumb {
+    background-image: url('images/sonora-logo.png');
+    border: 3px solid #f9b804;
+}
+
+.tabasco::-webkit-slider-thumb {
+    background-image: url('images/tabasco-logo.png');
+    border: 3px solid #d6222d;
+}
+
+.tamaulipas::-webkit-slider-thumb {
+    background-image: url('images/tamaulipas-logo.png');
+    border: 3px solid #13638d;
+}
+
+.tlaxcala::-webkit-slider-thumb {
+    background-image: url('images/tlaxcala-logo.png');
+    border: 3px solid #e3e4e6;
+}
+
+.veracruz::-webkit-slider-thumb {
+    background-image: url('images/veracruz-logo.png');
+    border: 3px solid #eeb403;
+}
+
+.yucatan::-webkit-slider-thumb {
+    background-image: url('images/yucatan-logo.png');
+    border: 3px solid #008449;
+}
+
+.zacatecas::-webkit-slider-thumb {
+    background-image: url('images/zacatecas-logo.png');
+    border: 3px solid #e9c005;
+}
