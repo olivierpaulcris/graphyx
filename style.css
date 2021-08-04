@@ -11,6 +11,29 @@ body {
     align-items: center;
 }
 
+#date {
+    position: absolute;
+    right: 13%;
+    top: 60%;
+    text-align: center;
+}
+
+#title-date {
+    font-size: 50px;
+}
+
+#source-data {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    text-align: right;
+    font-size: 20px;
+}
+
+.circle-img {
+    border-radius: 50%;
+}
+
 h1 {
     margin: 0px 0px;
     padding: 0px 0px;

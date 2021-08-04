@@ -1,9 +1,12 @@
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
+app.controller('myCtrl', function($scope, $timeout) {
   $scope.maxValue = 2132929.372;
   $scope.maxFont = 43;
   $scope.maxHeight = 38;
-  $scope.states = [
+  var date = new Date('2003-01-01');
+  $scope.date = date;
+
+  datas = [
     {
       name:'Aguascalientes', 
       value: 121197.634, 
@@ -197,5 +200,48 @@ app.controller('myCtrl', function($scope) {
       class:'zacatecas', 
     },
   ];
+
+  $scope.states = datas;
+
+  $scope.xample = datas[0].value;
+
+  var timer;
+  var i = 0;
+  var inc = 0;
+
+  function myLoop() {
+    timer = $timeout(function () {
+        console.log("Timeout executed", Date.now());
+    }, 100);
+
+    timer.then(function () {
+        console.log("Timer resolved!");
+
+        inc = inc + 100.12;
+
+        datas[0].value = datas[0].value + inc;
+
+        $scope.maxValue = datas[0].value <= 2132929.372 ? $scope.maxValue : datas[0].value;
+
+        $scope.states = datas;
+
+        $scope.date.setDate(date.getDate() + 1);
+
+        if(i <= 365) {
+          myLoop();
+        }
+        
+        i++;
+
+    }, function () {
+        console.log("Timer rejected!");
+    });
+}
+
+myLoop();
+
+$scope.$on("$destroy", function (event) {
+  $timeout.cancel(timer);
+});
 
 });

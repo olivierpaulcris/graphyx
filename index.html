@@ -9,11 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
     <div style="width: 100%; margin: 0 auto;">
-        
         <h1 class="title-graph">Producto Interno Bruto por Entidad Federativa</h1>
 
         <div class="flex-container" ng-repeat="(i, state) in states | orderBy: '-value'">
@@ -31,10 +29,22 @@
                 </h1>
             </div>
         </div>
-
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
-    <script src="angular.js"></script>
+    <div id="date">
+        <p><img src="./images/cambalache-logo.jpg" alt="" width="200" class="circle-img"></p>
+        <h1 id="title-date">{{date | date:'dd/MM/yyyy'}}</h1>
+    </div>
+    <div id="source-data">
+        <p>
+            <strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </strong> 
+        </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/angular.js"></script>
 </body>
 </html>
