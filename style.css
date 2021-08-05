@@ -2,6 +2,7 @@ body {
     background-color: #bbdefb;
     font-family: 'Roboto', sans-serif;
     color: #002241;
+    transition: width 2s;
 }
 
 .flex-container {
@@ -392,7 +393,7 @@ h1 {
 
 .tlaxcala::-webkit-slider-thumb {
     background-image: url('images/tlaxcala-logo.png');
-    border: 3px solid #e3e4e6;
+    border: 3px solid #9da1a4;
 }
 
 .veracruz::-webkit-slider-thumb {

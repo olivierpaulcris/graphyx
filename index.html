@@ -12,7 +12,7 @@
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
     <div style="width: 100%; margin: 0 auto;">
-        <h1 class="title-graph">Producto Interno Bruto por Entidad Federativa</h1>
+        <h1 class="title-graph">Producto Interno Bruto (PIB) Por Estado En México</h1>
 
         <div class="flex-container" ng-repeat="(i, state) in states | orderBy: '-value'">
             <div class="title-container">
@@ -38,8 +38,7 @@
     <div id="source-data">
         <p>
             <strong>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                {{maxValue}}
+                Fuente: Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </strong> 
         </p>
     </div>

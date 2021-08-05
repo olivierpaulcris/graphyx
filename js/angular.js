@@ -33,7 +33,7 @@ app.controller('myCtrl', function($scope, $timeout) {
       ]
     },
     {
-      name:'Baja California', 
+      name:'Baja California Norte', 
       value: 0, 
       color: "#44c5f0",
       class:'baja-california', 
@@ -711,7 +711,7 @@ app.controller('myCtrl', function($scope, $timeout) {
     {
       name:'Tlaxcala', 
       value: 0, 
-      color: "#e3e4e6",
+      color: "#9da1a4",
       class:'tlaxcala',  
       values: [
         {name: '2003', value: 83254.186},
@@ -822,27 +822,22 @@ app.controller('myCtrl', function($scope, $timeout) {
 
   function myLoop() {
     timer = $timeout(function () {
-        console.log("Timeout executed", Date.now());
     }, 100);
 
     timer.then(function () {
-      console.log("Timer resolved!");
-
-      data.forEach(function(state, a) {
-        if(maxValue < data[a].values[year+1].value) {
-          maxValue = data[a].values[year+1].value;
-        }
-      });
-
-      $scope.maxValue = maxValue; 
-
       $scope.date.setDate(date.getDate() + 1);
 
       data.forEach(function(state, a) {
         state.value = first == true ? data[a].values[year].value : state.value;
         value = state.value + ((data[a].values[(year+1)].value - data[a].values[year].value) / 365);
         state.value = value > 0 ? value : 0;
+
+        if(maxValue < state.value) {
+          maxValue = state.value;
+        }
       });
+
+      $scope.maxValue = maxValue; 
 
       if(first == true) first = false;
 
