@@ -1,213 +1,824 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $timeout) {
-  $scope.maxValue = 2132929.372;
+  $scope.maxValue = 0;
   $scope.maxFont = 43;
   $scope.maxHeight = 38;
-  var date = new Date('2003-01-01');
+  var date = new Date('2004-01-01');
   $scope.date = date;
 
-  datas = [
+  let data = [
     {
       name:'Aguascalientes', 
-      value: 121197.634, 
+      value: 0, 
       color: "#df4a2e",
-      class: "aguascalientes"
+      class: "aguascalientes",
+      values: [
+        {name: '2003', value: 121197.634},
+        {name: '2004', value: 126554.147},
+        {name: '2005', value: 129628.028},
+        {name: '2006', value: 138111.823},
+        {name: '2007', value: 150305.117},
+        {name: '2008', value: 150949.983},
+        {name: '2009', value: 143253.947},
+        {name: '2010', value: 152205.212},
+        {name: '2011', value: 158934.494},
+        {name: '2012', value: 167705.967},
+        {name: '2013', value: 172820.491},
+        {name: '2014', value: 190482.862},
+        {name: '2015', value: 198220.641},
+        {name: '2016', value: 211672.469},
+        {name: '2017', value: 216705.56},
+        {name: '2018', value: 224891.592},
+        {name: '2019', value: 222651.573}
+      ]
     },
     {
       name:'Baja California', 
-      value: 399514.624, 
+      value: 0, 
       color: "#44c5f0",
       class:'baja-california', 
+      values: [
+        {name: '2003', value: 399514.624},
+        {name: '2003', value: 423005.499},
+        {name: '2003', value: 433008.166},
+        {name: '2003', value: 456019.296},
+        {name: '2003', value: 461581.274},
+        {name: '2003', value: 457556.565},
+        {name: '2003', value: 407745.948},
+        {name: '2003', value: 428162.546},
+        {name: '2003', value: 440700.662},
+        {name: '2003', value: 456024.472},
+        {name: '2003', value: 465524.695},
+        {name: '2003', value: 478121.939},
+        {name: '2003', value: 511459.528},
+        {name: '2003', value: 535552.651},
+        {name: '2003', value: 553327.213},
+        {name: '2003', value: 566045.913},
+        {name: '2003', value: 575784.013},
+      ]
     },
     {
       name:'Baja California Sur', 
-      value: 76047.593, 
+      value: 0, 
       color: "#0071bd",
-      class:'baja-california-sur', 
+      class:'baja-california-sur',  
+      values: [
+        {name: '2003', value: 76047.593},
+        {name: '2003', value: 81546.009},
+        {name: '2003', value: 87397.67},
+        {name: '2003', value: 93655.622},
+        {name: '2003', value: 106199.426},
+        {name: '2003', value: 108975.356},
+        {name: '2003', value: 108338.811},
+        {name: '2003', value: 110656.4},
+        {name: '2003', value: 114707.762},
+        {name: '2003', value: 117345.833},
+        {name: '2003', value: 115027.644},
+        {name: '2003', value: 116027.018},
+        {name: '2003', value: 130520.642},
+        {name: '2003', value: 133948.675},
+        {name: '2003', value: 148376.63},
+        {name: '2003', value: 173200.594},
+        {name: '2003', value: 159009.788},
+      ]
     },
     {
       name:'Campeche', 
-      value: 1047511.322, 
+      value: 0, 
       color: "#0e6da5",
-      class:'campeche', 
+      class:'campeche',
+      values: [
+        {name: '2003', value: 1047511.322},
+        {name: '2003', value: 1059561.025},
+        {name: '2003', value: 1038533.775},
+        {name: '2003', value: 1014280.35},
+        {name: '2003', value: 947575.493},
+        {name: '2003', value: 867231.044},
+        {name: '2003', value: 780757.429},
+        {name: '2003', value: 753968.591},
+        {name: '2003', value: 726503.856},
+        {name: '2003', value: 714787.065},
+        {name: '2003', value: 721085.063},
+        {name: '2003', value: 685981.27},
+        {name: '2003', value: 637604.643},
+        {name: '2003', value: 600612.272},
+        {name: '2003', value: 537882.577},
+        {name: '2003', value: 529465.695},
+        {name: '2003', value: 517433.151},
+      ]
     },
     {
       name:'Coahuila', 
-      value: 436573.518, 
+      value: 0, 
       color: "#4c7e27",
-      class:'coahuila', 
+      class:'coahuila',
+      values: [
+        {name: '2003', value: 436573.518},
+        {name: '2003', value: 449143.882},
+        {name: '2003', value: 458867.907},
+        {name: '2003', value: 480488.194},
+        {name: '2003', value: 500478.657},
+        {name: '2003', value: 498326.775},
+        {name: '2003', value: 421327.489},
+        {name: '2003', value: 489951.776},
+        {name: '2003', value: 523207.112},
+        {name: '2003', value: 549551.802},
+        {name: '2003', value: 538206.987},
+        {name: '2003', value: 559217.153},
+        {name: '2003', value: 563928.44},
+        {name: '2003', value: 572243.615},
+        {name: '2003', value: 601722.052},
+        {name: '2003', value: 608138.802},
+        {name: '2003', value: 604192.363},
+      ]
     },
     {
       name:'Colima', 
-      value: 67732.93, 
+      value: 0, 
       color: "#d2a898",
-      class:'colima', 
+      class:'colima',  
+      values: [
+        {name: '2003', value: 67732.93},
+        {name: '2003', value: 67794.051},
+        {name: '2003', value: 68258.171},
+        {name: '2003', value: 72533.785},
+        {name: '2003', value: 77526.37},
+        {name: '2003', value: 78953.717},
+        {name: '2003', value: 76446.9},
+        {name: '2003', value: 81992.178},
+        {name: '2003', value: 87944.969},
+        {name: '2003', value: 90540.289},
+        {name: '2003', value: 91422.446},
+        {name: '2003', value: 93703.258},
+        {name: '2003', value: 95878.066},
+        {name: '2003', value: 98576.211},
+        {name: '2003', value: 102039.429},
+        {name: '2003', value: 105031.03},
+        {name: '2003', value: 109564.087},
+      ]
     },
     {
       name:'Chiapas', 
-      value: 248123.227, 
+      value: 0, 
       color: "#774421",
       class:'chiapas', 
+      values: [
+        {name: '2003', value: 248123.227},
+        {name: '2003', value: 238375.89},
+        {name: '2003', value: 240279.559},
+        {name: '2003', value: 248414.302},
+        {name: '2003', value: 252536.304},
+        {name: '2003', value: 258289.89},
+        {name: '2003', value: 256698.362},
+        {name: '2003', value: 270989.331},
+        {name: '2003', value: 279446.584},
+        {name: '2003', value: 284733.625},
+        {name: '2003', value: 280925.273},
+        {name: '2003', value: 294029.165},
+        {name: '2003', value: 287811.831},
+        {name: '2003', value: 287034.269},
+        {name: '2003', value: 277580.835},
+        {name: '2003', value: 267664.128},
+        {name: '2003', value: 260612.446},
+      ]
     },
     {
       name:'Chihuahua', 
-      value: 360426.663, 
+      value: 0, 
       color: "#7cc4ea",
       class:'chihuahua', 
+      values: [
+        {name: '2003', value: 360426.663},
+        {name: '2003', value: 376662.637},
+        {name: '2003', value: 389210.794},
+        {name: '2003', value: 419631.539},
+        {name: '2003', value: 434649.92},
+        {name: '2003', value: 440792.887},
+        {name: '2003', value: 401079.179},
+        {name: '2003', value: 417796.42},
+        {name: '2003', value: 427430.027},
+        {name: '2003', value: 459166.22},
+        {name: '2003', value: 476290.197},
+        {name: '2003', value: 485693.517},
+        {name: '2003', value: 510642.914},
+        {name: '2003', value: 534205.546},
+        {name: '2003', value: 551497.303},
+        {name: '2003', value: 564077.669},
+        {name: '2003', value: 572787.223},
+      ]
     },
     {
       name:'CDMX', 
-      value: 2132929.372, 
+      value: 0, 
       color: "#11ad4b",
-      class:'cdmx', 
+      class:'cdmx',  
+      values: [
+        {name: '2003', value: 2132929.372},
+        {name: '2004', value: 2226949.736},
+        {name: '2005', value: 2258091.583},
+        {name: '2006', value: 2374722.886},
+        {name: '2007', value: 2408565.865},
+        {name: '2008', value: 2450391.202},
+        {name: '2009', value: 2362516.439},
+        {name: '2010', value: 2446910.439},
+        {name: '2011', value: 2533806.893},
+        {name: '2012', value: 2633934.642},
+        {name: '2013', value: 2673066.331},
+        {name: '2014', value: 2748551.988},
+        {name: '2015', value: 2869792.908},
+        {name: '2016', value: 2957233.594},
+        {name: '2017', value: 3045539.859},
+        {name: '2018', value: 3126459.566},
+        {name: '2019', value: 3133609.299},
+      ]
     },
     {
       name:'Durango', 
-      value: 152922.727, 
+      value: 0, 
       color: "#be1532",
-      class:'durango', 
+      class:'durango',
+      values: [
+        {name: '2003', value: 152922.727},
+        {name: '2003', value: 157662.281},
+        {name: '2003', value: 155001.886},
+        {name: '2003', value: 160388.081},
+        {name: '2003', value: 162709.802},
+        {name: '2003', value: 165722.989},
+        {name: '2003', value: 163083.647},
+        {name: '2003', value: 169268.084},
+        {name: '2003', value: 176314.713},
+        {name: '2003', value: 182943.056},
+        {name: '2003', value: 189052.812},
+        {name: '2003', value: 192968.629},
+        {name: '2003', value: 192888.101},
+        {name: '2003', value: 200660.962},
+        {name: '2003', value: 199559.31},
+        {name: '2003', value: 202272.029},
+        {name: '2003', value: 204074.123},
+      ]
     },
     {
       name:'Guanajuato', 
-      value: 438354.387, 
+      value: 0, 
       color: "#1c6799",
-      class:'guanajuato', 
+      class:'guanajuato',  
+      values: [
+        {name: '2003', value: 438354.387},
+        {name: '2003', value: 450953.155},
+        {name: '2003', value: 454625.559},
+        {name: '2003', value: 477646.929},
+        {name: '2003', value: 488729.604},
+        {name: '2003', value: 503024.423},
+        {name: '2003', value: 481674.906},
+        {name: '2003', value: 517168.681},
+        {name: '2003', value: 548163.17},
+        {name: '2003', value: 570921.987},
+        {name: '2003', value: 594575.532},
+        {name: '2003', value: 620084.804},
+        {name: '2003', value: 653849.926},
+        {name: '2003', value: 673328.294},
+        {name: '2003', value: 704179.453},
+        {name: '2003', value: 713090.078},
+        {name: '2003', value: 702632.811},
+      ]
     },
     {
       name:'Guerrero', 
-      value: 182713.981, 
+      value: 0, 
       color: "#7bc1e5",
-      class:'guerrero', 
+      class:'guerrero',
+      values: [
+        {name: '2003', value: 182713.981},
+        {name: '2003', value: 192557.837},
+        {name: '2003', value: 195219.889},
+        {name: '2003', value: 199540.65},
+        {name: '2003', value: 204879.83},
+        {name: '2003', value: 208284.821},
+        {name: '2003', value: 201239.316},
+        {name: '2003', value: 211890.535},
+        {name: '2003', value: 214478.174},
+        {name: '2003', value: 218118.481},
+        {name: '2003', value: 218811.378},
+        {name: '2003', value: 227659.005},
+        {name: '2003', value: 229580.566},
+        {name: '2003', value: 234185.03},
+        {name: '2003', value: 234094.182},
+        {name: '2003', value: 240685.982},
+        {name: '2003', value: 240613.452},
+      ]
     },
     {
       name:'Hidalgo', 
-      value: 179553.378, 
+      name:'Hidalgo', 
+      value: 0, 
       color: "#c9a95f",
       class:'hidalgo', 
+      values: [
+        {name: '2003', value: 179553.378},
+        {name: '2003', value: 191549.579},
+        {name: '2003', value: 190073.779},
+        {name: '2003', value: 195404.535},
+        {name: '2003', value: 201655.418},
+        {name: '2003', value: 208800.335},
+        {name: '2003', value: 195581.126},
+        {name: '2003', value: 206303.584},
+        {name: '2003', value: 214569.188},
+        {name: '2003', value: 222797.005},
+        {name: '2003', value: 230982.767},
+        {name: '2003', value: 243064.784},
+        {name: '2003', value: 258695.052},
+        {name: '2003', value: 268833.622},
+        {name: '2003', value: 270118.073},
+        {name: '2003', value: 276996.193},
+        {name: '2003', value: 273154.931},
+      ]
     },
     {
       name:'Jalisco', 
-      value: 794957.322, 
+      value: 0, 
       color: "#0d668c",
-      class:'jalisco', 
+      class:'jalisco',
+      values: [
+        {name: '2003', value: 794957.322},
+        {name: '2003', value: 819238.31},
+        {name: '2003', value: 842128.813},
+        {name: '2003', value: 886009.726},
+        {name: '2003', value: 913139.834},
+        {name: '2003', value: 918573.456},
+        {name: '2003', value: 870319.1},
+        {name: '2003', value: 925371.837},
+        {name: '2003', value: 953148.056},
+        {name: '2003', value: 995285.999},
+        {name: '2003', value: 1018578.607},
+        {name: '2003', value: 1067256.762},
+        {name: '2003', value: 1104884.87},
+        {name: '2003', value: 1149129.548},
+        {name: '2003', value: 1176616.034},
+        {name: '2003', value: 1208076.022},
+        {name: '2003', value: 1217549.85},
+      ]
     },
     {
       name:'Edo. de México', 
-      value: 1048403.59, 
+      value: 0, 
       color: "#ce2c16",
       class:'edomx', 
+      values: [
+        {name: '2003', value: 1048403.59},
+        {name: '2003', value: 1073840.81},
+        {name: '2003', value: 1099376.794},
+        {name: '2003', value: 1150701.95},
+        {name: '2003', value: 1184658.428},
+        {name: '2003', value: 1198144.35},
+        {name: '2003', value: 1138727.918},
+        {name: '2003', value: 1226813.687},
+        {name: '2003', value: 1283448.197},
+        {name: '2003', value: 1339994.611},
+        {name: '2003', value: 1365154.229},
+        {name: '2003', value: 1402291.945},
+        {name: '2003', value: 1445183.505},
+        {name: '2003', value: 1485467.443},
+        {name: '2003', value: 1556925.971},
+        {name: '2003', value: 1608137.236},
+        {name: '2003', value: 1577636.53},
+      ]
     },
     {
       name:'Michoacán', 
-      value: 294468.306, 
+      value: 0, 
       color: "#04903f",
-      class:'michoacan', 
+      class:'michoacan',  
+      values: [
+        {name: '2003', value: 294468.306},
+        {name: '2003', value: 301021.642},
+        {name: '2003', value: 306026.395},
+        {name: '2003', value: 320451.426},
+        {name: '2003', value: 328272.19},
+        {name: '2003', value: 334657.914},
+        {name: '2003', value: 317003.042},
+        {name: '2003', value: 329767.26},
+        {name: '2003', value: 343275.664},
+        {name: '2003', value: 352030.387},
+        {name: '2003', value: 359465.987},
+        {name: '2003', value: 379655.442},
+        {name: '2003', value: 386038.362},
+        {name: '2003', value: 402111.981},
+        {name: '2003', value: 414856.586},
+        {name: '2003', value: 424359.973},
+        {name: '2003', value: 424974.326},
+      ]
     },
     {
       name:'Morelos', 
-      value: 158055.834, 
+      value: 0, 
       color: "#7c3e14",
       class:'morelos', 
+      values: [
+        {name: '2003', value: 158055.834},
+        {name: '2003', value: 159734.875},
+        {name: '2003', value: 171279.471},
+        {name: '2003', value: 168177.81},
+        {name: '2003', value: 169325.362},
+        {name: '2003', value: 169672.507},
+        {name: '2003', value: 168348.348},
+        {name: '2003', value: 174984.467},
+        {name: '2003', value: 174678.088},
+        {name: '2003', value: 175717.837},
+        {name: '2003', value: 182126.143},
+        {name: '2003', value: 185662.448},
+        {name: '2003', value: 187472.397},
+        {name: '2003', value: 194412.078},
+        {name: '2003', value: 203238.504},
+        {name: '2003', value: 201316.454},
+        {name: '2003', value: 201083.5},
+      ]
     },
     {
       name:'Nayarit', 
-      value: 76105.196, 
+      value: 0, 
       color: "#069c41",
-      class:'nayarit', 
+      class:'nayarit',  
+      values: [
+        {name: '2003', value: 76105.196},
+        {name: '2003', value: 86879.422},
+        {name: '2003', value: 90269.847},
+        {name: '2003', value: 92165.697},
+        {name: '2003', value: 91675.276},
+        {name: '2003', value: 98292.89},
+        {name: '2003', value: 93038.497},
+        {name: '2003', value: 97786.134},
+        {name: '2003', value: 100704.16},
+        {name: '2003', value: 100800.218},
+        {name: '2003', value: 103627.459},
+        {name: '2003', value: 108986.732},
+        {name: '2003', value: 114062.999},
+        {name: '2003', value: 119473.243},
+        {name: '2003', value: 121000.114},
+        {name: '2003', value: 120639.992},
+        {name: '2003', value: 120945.602},
+      ]
     },
     {
       name:'Nuevo León', 
-      value: 803888.528, 
+      value: 0, 
       color: "#9da1a4",
-      class:'nuevo-leon', 
+      class:'nuevo-leon',  
+      values: [
+        {name: '2003', value: 803888.528},
+        {name: '2003', value: 849841.554},
+        {name: '2003', value: 885438.787},
+        {name: '2003', value: 946837.916},
+        {name: '2003', value: 1004636.521},
+        {name: '2003', value: 1020366.768},
+        {name: '2003', value: 952725.778},
+        {name: '2003', value: 1025184.258},
+        {name: '2003', value: 1069812.268},
+        {name: '2003', value: 1113817.766},
+        {name: '2003', value: 1124999.893},
+        {name: '2003', value: 1161168.669},
+        {name: '2003', value: 1228082.513},
+        {name: '2003', value: 1257648.421},
+        {name: '2003', value: 1306549.097},
+        {name: '2003', value: 1353169.991},
+        {name: '2003', value: 1373592.856},
+      ]
     },
     {
       name:'Oaxaca', 
-      value: 202963.936, 
+      value: 0, 
       color: "#ae2e22",
       class:'oaxaca', 
+      values: [
+        {name: '2003', value: 202963.936},
+        {name: '2003', value: 210757.192},
+        {name: '2003', value: 213677.217},
+        {name: '2003', value: 218023.575},
+        {name: '2003', value: 219815.363},
+        {name: '2003', value: 226633.787},
+        {name: '2003', value: 224510.705},
+        {name: '2003', value: 228089.144},
+        {name: '2003', value: 234955.838},
+        {name: '2003', value: 239680.171},
+        {name: '2003', value: 245515.976},
+        {name: '2003', value: 250239.106},
+        {name: '2003', value: 260612.907},
+        {name: '2003', value: 256580.339},
+        {name: '2003', value: 250518.62},
+        {name: '2003', value: 260740.417},
+        {name: '2003', value: 252621.57},
+      ]
     },
     {
       name:'Puebla', 
-      value: 395907.258, 
+      value: 0, 
       color: "#168dc6",
-      class:'puebla', 
+      class:'puebla',
+      values: [
+        {name: '2003', value: 395907.258},
+        {name: '2003', value: 405907.943},
+        {name: '2003', value: 428179.294},
+        {name: '2003', value: 447201.403},
+        {name: '2003', value: 465818.722},
+        {name: '2003', value: 468969.471},
+        {name: '2003', value: 432578.676},
+        {name: '2003', value: 469967.84},
+        {name: '2003', value: 493353.224},
+        {name: '2003', value: 524226.058},
+        {name: '2003', value: 519256.535},
+        {name: '2003', value: 526200.669},
+        {name: '2003', value: 540604.128},
+        {name: '2003', value: 555309.088},
+        {name: '2003', value: 589080.273},
+        {name: '2003', value: 603843.688},
+        {name: '2003', value: 596318.409},
+      ]
     },
     {
       name:'Querétaro', 
-      value: 212106.713, 
+      value: 0, 
       color: "#2c1e74",
-      class:'queretaro', 
+      class:'queretaro',  
+      values: [
+        {name: '2003', value: 212106.713},
+        {name: '2003', value: 227917.275},
+        {name: '2003', value: 243311.19},
+        {name: '2003', value: 258448.271},
+        {name: '2003', value: 271622.051},
+        {name: '2003', value: 278348.405},
+        {name: '2003', value: 270311.398},
+        {name: '2003', value: 287403.169},
+        {name: '2003', value: 308865.228},
+        {name: '2003', value: 318294.372},
+        {name: '2003', value: 319989.728},
+        {name: '2003', value: 342666.454},
+        {name: '2003', value: 362418.911},
+        {name: '2003', value: 377947.864},
+        {name: '2003', value: 395109.808},
+        {name: '2003', value: 406744.73},
+        {name: '2003', value: 403161.492},
+      ]
     },
     {
       name:'Quintana Roo', 
-      value: 144233.02, 
+      value: 0, 
       color: "#d8521b",
       class:'quintana-roo', 
+      values: [
+        {name: '2003', value: 144233.02},
+        {name: '2003', value: 156941.599},
+        {name: '2003', value: 163681.664},
+        {name: '2003', value: 174364.522},
+        {name: '2003', value: 192904.582},
+        {name: '2003', value: 203018.581},
+        {name: '2003', value: 185671.746},
+        {name: '2003', value: 195148.828},
+        {name: '2003', value: 206053.849},
+        {name: '2003', value: 215709.871},
+        {name: '2003', value: 225272.667},
+        {name: '2003', value: 233252.369},
+        {name: '2003', value: 244081.496},
+        {name: '2003', value: 261497.598},
+        {name: '2003', value: 272211.726},
+        {name: '2003', value: 286533.451},
+        {name: '2003', value: 290271.733},
+      ]
     },
     {
       name:'San Luis Potosí', 
-      value: 224280.267, 
+      value: 0, 
       color: "#d1b42c",
       class:'san-luis-potosi', 
+      values: [
+        {name: '2003', value: 224280.267},
+        {name: '2003', value: 237464.465},
+        {name: '2003', value: 247240.388},
+        {name: '2003', value: 258649.446},
+        {name: '2003', value: 264315.631},
+        {name: '2003', value: 270024.005},
+        {name: '2003', value: 255845.961},
+        {name: '2003', value: 269397.22},
+        {name: '2003', value: 283881.746},
+        {name: '2003', value: 297293.962},
+        {name: '2003', value: 307896.47},
+        {name: '2003', value: 316716.343},
+        {name: '2003', value: 329359.358},
+        {name: '2003', value: 342065.043},
+        {name: '2003', value: 354677.904},
+        {name: '2003', value: 369840.94},
+        {name: '2003', value: 368700.803},
+      ]
     },
     {
       name:'Sinaloa', 
-      value: 268247.066, 
+      value: 0, 
       color: "#bc1832",
       class: 'sinaloa',
+      values: [
+        {name: '2003', value: 268247.066},
+        {name: '2003', value: 284658.629},
+        {name: '2003', value: 285708.482},
+        {name: '2003', value: 294951.695},
+        {name: '2003', value: 305622.537},
+        {name: '2003', value: 316380.798},
+        {name: '2003', value: 303066.175},
+        {name: '2003', value: 312655.113},
+        {name: '2003', value: 318762.638},
+        {name: '2003', value: 330191.387},
+        {name: '2003', value: 334097.307},
+        {name: '2003', value: 340077.857},
+        {name: '2003', value: 358848.314},
+        {name: '2003', value: 376438.398},
+        {name: '2003', value: 380987.655},
+        {name: '2003', value: 390894.97},
+        {name: '2003', value: 399005.392},
+      ]
     },
     {
       name:'Sonora', 
-      value: 365533.727, 
+      value: 0, 
       color: "#f9b804",
       class:'sonora', 
+      values: [
+        {name: '2003', value: 365533.727},
+        {name: '2003', value: 384484.325},
+        {name: '2003', value: 404881.254},
+        {name: '2003', value: 429625.189},
+        {name: '2003', value: 435397.343},
+        {name: '2003', value: 436717.189},
+        {name: '2003', value: 410374.271},
+        {name: '2003', value: 431501.919},
+        {name: '2003', value: 471510.171},
+        {name: '2003', value: 495926.031},
+        {name: '2003', value: 510315.674},
+        {name: '2003', value: 522896.949},
+        {name: '2003', value: 549606.823},
+        {name: '2003', value: 578945.379},
+        {name: '2003', value: 575986.463},
+        {name: '2003', value: 581413.804},
+        {name: '2003', value: 580480.582},
+      ]
     },
     {
       name:'Tabasco', 
-      value: 374891.404, 
+      value: 0, 
       color: "#d6222d",
-      class:'tabasco', 
+      class:'tabasco',
+      values: [
+        {name: '2003', value: 374891.404},
+        {name: '2003', value: 391243.029},
+        {name: '2003', value: 421079.732},
+        {name: '2003', value: 445309.616},
+        {name: '2003', value: 454079.113},
+        {name: '2003', value: 475202.827},
+        {name: '2003', value: 495944.159},
+        {name: '2003', value: 525011.917},
+        {name: '2003', value: 549751.131},
+        {name: '2003', value: 564003.811},
+        {name: '2003', value: 553628.205},
+        {name: '2003', value: 564794.238},
+        {name: '2003', value: 562212.305},
+        {name: '2003', value: 534685.495},
+        {name: '2003', value: 509388.361},
+        {name: '2003', value: 467226.446},
+        {name: '2003', value: 448090.72},
+      ]
     },
     {
       name:'Tamaulipas', 
-      value: 391574.439, 
+      value: 0, 
       color: "#13638d",
       class:'tamaulipas', 
+      values: [
+        {name: '2003', value: 391574.439},
+        {name: '2003', value: 410112.746},
+        {name: '2003', value: 436490.981},
+        {name: '2003', value: 449609.24},
+        {name: '2003', value: 464007.812},
+        {name: '2003', value: 483350.662},
+        {name: '2003', value: 439739.323},
+        {name: '2003', value: 448215.116},
+        {name: '2003', value: 456768.535},
+        {name: '2003', value: 466371.322},
+        {name: '2003', value: 473241.401},
+        {name: '2003', value: 477891.309},
+        {name: '2003', value: 492586.952},
+        {name: '2003', value: 500458.048},
+        {name: '2003', value: 498369.426},
+        {name: '2003', value: 508491.928},
+        {name: '2003', value: 517770.157},
+      ]
     },
     {
       name:'Tlaxcala', 
-      value: 83254.186, 
+      value: 0, 
       color: "#e3e4e6",
-      class:'tlaxcala', 
+      class:'tlaxcala',  
+      values: [
+        {name: '2003', value: 83254.186},
+        {name: '2003', value: 89789.73},
+        {name: '2003', value: 79279.279},
+        {name: '2003', value: 77889.934},
+        {name: '2003', value: 79019.573},
+        {name: '2003', value: 83246.79},
+        {name: '2003', value: 81739.53},
+        {name: '2003', value: 88809.886},
+        {name: '2003', value: 86031.739},
+        {name: '2003', value: 89918.601},
+        {name: '2003', value: 87657.644},
+        {name: '2003', value: 90362.518},
+        {name: '2003', value: 96458.62},
+        {name: '2003', value: 96859.667},
+        {name: '2003', value: 95585.227},
+        {name: '2003', value: 98881.599},
+        {name: '2003', value: 103823.011},
+      ]
     },
     {
       name:'Veracruz', 
-      value: 613590.201, 
+      value: 0, 
       color: "#eeb403",
-      class:'veracruz', 
+      class:'veracruz',
+      values: [
+        {name: '2003', value: 613590.201},
+        {name: '2003', value: 643859.491},
+        {name: '2003', value: 648906.398},
+        {name: '2003', value: 684557.368},
+        {name: '2003', value: 705608.578},
+        {name: '2003', value: 704314.03},
+        {name: '2003', value: 688981.395},
+        {name: '2003', value: 718148.55},
+        {name: '2003', value: 746817.731},
+        {name: '2003', value: 779730.434},
+        {name: '2003', value: 781357.276},
+        {name: '2003', value: 780785.356},
+        {name: '2003', value: 785745.931},
+        {name: '2003', value: 784930.108},
+        {name: '2003', value: 776072.856},
+        {name: '2003', value: 794018.647},
+        {name: '2003', value: 801505.702},
+      ]
     },
     {
       name:'Yucatán', 
-      value: 161636.497, 
+      value: 0, 
       color: "#008449",
-      class:'yucatan', 
+      class:'yucatan',
+      values: [
+        {name: '2003', value: 161636.497},
+        {name: '2003', value: 169013.747},
+        {name: '2003', value: 176907.681},
+        {name: '2003', value: 185462.602},
+        {name: '2003', value: 191217.075},
+        {name: '2003', value: 193158.623},
+        {name: '2003', value: 189365.458},
+        {name: '2003', value: 196149.981},
+        {name: '2003', value: 202893.85},
+        {name: '2003', value: 214700.599},
+        {name: '2003', value: 215788.237},
+        {name: '2003', value: 223858.768},
+        {name: '2003', value: 230374.526},
+        {name: '2003', value: 242505.306},
+        {name: '2003', value: 252391.124},
+        {name: '2003', value: 261283.809},
+        {name: '2003', value: 264440.67},
+      ]
     },
     {
       name:'Zacatecas', 
-      value: 101406.31, 
+      value: 0, 
       color: "#e9c005",
-      class:'zacatecas', 
+      class:'zacatecas',  
+      values: [
+        {name: '2003', value: 101406.31},
+        {name: '2003', value: 105664.685},
+        {name: '2003', value: 105661.441},
+        {name: '2003', value: 112108.368},
+        {name: '2003', value: 115935.139},
+        {name: '2003', value: 126383.577},
+        {name: '2003', value: 130512.00},
+        {name: '2003', value: 144730.56},
+        {name: '2003', value: 144876.886},
+        {name: '2003', value: 148728.64},
+        {name: '2003', value: 146858.788},
+        {name: '2003', value: 156808.457},
+        {name: '2003', value: 159905.359},
+        {name: '2003', value: 157998.056},
+        {name: '2003', value: 157621.131},
+        {name: '2003', value: 157631.239},
+        {name: '2003', value: 151751.708},
+      ]
     },
+      
   ];
 
-  $scope.states = datas;
-
-  $scope.xample = datas[0].value;
+  $scope.states = data;
 
   var timer;
+  var first = true;
   var i = 0;
-  var inc = 0;
+  var year = 0;
+  var value = 0;
+  var maxValue = 0;
 
   function myLoop() {
     timer = $timeout(function () {
@@ -215,33 +826,46 @@ app.controller('myCtrl', function($scope, $timeout) {
     }, 100);
 
     timer.then(function () {
-        console.log("Timer resolved!");
+      console.log("Timer resolved!");
 
-        inc = inc + 100.12;
-
-        datas[0].value = datas[0].value + inc;
-
-        $scope.maxValue = datas[0].value <= 2132929.372 ? $scope.maxValue : datas[0].value;
-
-        $scope.states = datas;
-
-        $scope.date.setDate(date.getDate() + 1);
-
-        if(i <= 365) {
-          myLoop();
+      data.forEach(function(state, a) {
+        if(maxValue < data[a].values[year+1].value) {
+          maxValue = data[a].values[year+1].value;
         }
-        
+      });
+
+      $scope.maxValue = maxValue; 
+
+      $scope.date.setDate(date.getDate() + 1);
+
+      data.forEach(function(state, a) {
+        state.value = first == true ? data[a].values[year].value : state.value;
+        value = state.value + ((data[a].values[(year+1)].value - data[a].values[year].value) / 365);
+        state.value = value > 0 ? value : 0;
+      });
+
+      if(first == true) first = false;
+
+      if(i < 364) {
         i++;
+      } else {
+        i = 0;
+        year++;
+      }
+
+      if(year <= 15) {
+        myLoop();
+      }
 
     }, function () {
         console.log("Timer rejected!");
     });
-}
+  }
 
-myLoop();
+  myLoop();
 
-$scope.$on("$destroy", function (event) {
-  $timeout.cancel(timer);
-});
+  $scope.$on("$destroy", function (event) {
+    $timeout.cancel(timer);
+  });
 
 });
