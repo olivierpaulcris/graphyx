@@ -1,8 +1,11 @@
 body {
-    background-color: #bbdefb;
+    /* background-color: #bbdefb; */
     font-family: 'Roboto', sans-serif;
     color: #002241;
     transition: width 2s;
+    background-image: url(./images/mexico-mapa.png);
+    background-repeat: no-repeat;
+    background-size: 100% 105%;
 }
 
 .flex-container {
@@ -33,6 +36,7 @@ body {
 
 .circle-img {
     border-radius: 50%;
+    box-shadow: 2px 2px 6px #212121;
 }
 
 h1 {
@@ -75,6 +79,7 @@ h1 {
     outline: none;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    box-shadow: 2px 2px 6px #212121;
 }
 
 .slider::-webkit-slider-thumb {
@@ -89,6 +94,7 @@ h1 {
     background-position: center center;
     background-repeat: no-repeat;
     margin-left: 15px;
+    box-shadow: 2px 2px 6px #212121;
 }
 
 .place-0::-webkit-slider-thumb {
