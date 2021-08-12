@@ -1,0 +1,30 @@
+﻿
+Identifier:   DCAT-MEX-INEGI-SCNM.PIBE_r-AB2013-039
+
+Title:   Sistema de Cuentas Nacionales de México. Producto Interno Bruto por Entidad Federativa. Serie retropolada reducida. Revisada.
+
+Description:   INEGI. Sistema de Cuentas Nacionales de México. Producto Interno Bruto por Entidad Federativa. Serie retropolada reducida. SNIEG. Información de Interés Nacional.
+
+Permite conocer anualmente el comportamiento y composición de las actividades económicas de los estados, presentándose con base en el Sistema de Clasificación Industrial de América del Norte 2013
+
+Modified:   2021-07-05
+
+Publisher:   Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox:   atencion.usuarios@inegi.org.mx
+
+License:   https://www.inegi.org.mx/inegi/terminos.html
+
+DataDictionary:   
+
+Keyword:   "producto interno bruto", "estatal", "valor", "agregado", "economía", "actividad económica"
+
+ContactPoint:   Mtro. J. Armando Aguiar Rodríguez, 800 111 4634
+
+Temporal:   1980-01-2019-12
+
+Spatial:   Estados Unidos Mexicanos
+
+AccrualPeriodicity:   Anualmente
+
+Distribution:   https://www.inegi.org.mx/programas/pibent/2013/
